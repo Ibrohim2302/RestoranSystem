@@ -1,0 +1,6 @@
+@RestoranWebAPI_HostAddress = http://localhost:5168
+
+GET {{RestoranWebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
