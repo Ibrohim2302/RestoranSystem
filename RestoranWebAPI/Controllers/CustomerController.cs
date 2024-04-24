@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Interfaces;
+using Application.Interfaces;
 using Application.Requests.CustomerRequests;
 using Application.Responses.CustomerResponses;
 using Domain.Entities;
@@ -65,5 +65,3 @@ public class CustomerController : ControllerBase
         return response ? Ok() : NotFound($"Customer with ID {id} not found.");
     }
 }
-
-
