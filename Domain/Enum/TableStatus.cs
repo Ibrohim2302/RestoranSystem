@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RMS.Domain.Enum;
+namespace Domain.Enum;
 
 public enum TableStatus
 {

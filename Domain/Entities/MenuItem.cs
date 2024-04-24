@@ -1,12 +1,12 @@
-﻿using RMS.Domain.Abstract;
-using RMS.Domain.Enum;
+﻿using Domain.Abstract;
+using Domain.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RMS.Domain.Entities;
+namespace Domain.Entities;
 
 public class MenuItem : EntityBase
 {

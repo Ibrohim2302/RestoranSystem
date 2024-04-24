@@ -1,7 +1,7 @@
-﻿using RMS.Domain.Abstract;
-using RMS.Domain.Enum;
+﻿using Domain.Abstract;
+using Domain.Enum;
 
-namespace RMS.Domain.Entities;
+namespace Domain.Entities;
 
 public class Table : EntityBase
 {
