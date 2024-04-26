@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RMS.Infrastructure.Persistence.DataBases;
+namespace Infrastructure.Persistence.DataBases;
 
 public class EFContextFactory : IDesignTimeDbContextFactory<EFContext>
 {

@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using RMS.Infrastructure.Persistence.DataBases;
+using Infrastructure.Persistence.DataBases;
 
 #nullable disable
 
-namespace RMS.Infrastructure.Migrations
+namespace Infrastructure.Migrations
 {
     [DbContext(typeof(EFContext))]
     [Migration("20240412144447_Initial")]
@@ -25,7 +25,7 @@ namespace RMS.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("RMS.Domain.Entities.Customer", b =>
+            modelBuilder.Entity("Domain.Entities.Customer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -56,7 +56,7 @@ namespace RMS.Infrastructure.Migrations
                     b.ToTable("Customer");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.MenuItem", b =>
+            modelBuilder.Entity("Domain.Entities.MenuItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -87,7 +87,7 @@ namespace RMS.Infrastructure.Migrations
                     b.ToTable("MenuItem");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.Order", b =>
+            modelBuilder.Entity("Domain.Entities.Order", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -126,7 +126,7 @@ namespace RMS.Infrastructure.Migrations
                     b.ToTable("Order");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.OrderItem", b =>
+            modelBuilder.Entity("Domain.Entities.OrderItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -156,7 +156,7 @@ namespace RMS.Infrastructure.Migrations
                     b.ToTable("OrderItem");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.Payment", b =>
+            modelBuilder.Entity("Domain.Entities.Payment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -190,7 +190,7 @@ namespace RMS.Infrastructure.Migrations
                     b.ToTable("Payment");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.Reservation", b =>
+            modelBuilder.Entity("Domain.Entities.Reservation", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -214,7 +214,7 @@ namespace RMS.Infrastructure.Migrations
                     b.ToTable("Reservation");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.Table", b =>
+            modelBuilder.Entity("Domain.Entities.Table", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -242,15 +242,15 @@ namespace RMS.Infrastructure.Migrations
                     b.ToTable("Table");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.Order", b =>
+            modelBuilder.Entity("Domain.Entities.Order", b =>
                 {
-                    b.HasOne("RMS.Domain.Entities.Customer", "Customer")
+                    b.HasOne("Domain.Entities.Customer", "Customer")
                         .WithMany("Orders")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("RMS.Domain.Entities.Table", "Table")
+                    b.HasOne("Domain.Entities.Table", "Table")
                         .WithMany("Orders")
                         .HasForeignKey("TableId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -261,35 +261,35 @@ namespace RMS.Infrastructure.Migrations
                     b.Navigation("Table");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.OrderItem", b =>
+            modelBuilder.Entity("Domain.Entities.OrderItem", b =>
                 {
-                    b.HasOne("RMS.Domain.Entities.MenuItem", "MenuItem")
+                    b.HasOne("Domain.Entities.MenuItem", "MenuItem")
                         .WithMany("Items")
                         .HasForeignKey("MenuItemId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("RMS.Domain.Entities.Order", null)
+                    b.HasOne("Domain.Entities.Order", null)
                         .WithMany("Items")
                         .HasForeignKey("OrderId");
 
                     b.Navigation("MenuItem");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.Payment", b =>
+            modelBuilder.Entity("Domain.Entities.Payment", b =>
                 {
-                    b.HasOne("RMS.Domain.Entities.Order", "Order")
+                    b.HasOne("Domain.Entities.Order", "Order")
                         .WithOne("Payment")
-                        .HasForeignKey("RMS.Domain.Entities.Payment", "OrderId")
+                        .HasForeignKey("Domain.Entities.Payment", "OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.Reservation", b =>
+            modelBuilder.Entity("Domain.Entities.Reservation", b =>
                 {
-                    b.HasOne("RMS.Domain.Entities.Customer", "Customer")
+                    b.HasOne("Domain.Entities.Customer", "Customer")
                         .WithMany("Reservations")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -298,26 +298,26 @@ namespace RMS.Infrastructure.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.Table", b =>
+            modelBuilder.Entity("Domain.Entities.Table", b =>
                 {
-                    b.HasOne("RMS.Domain.Entities.Order", null)
+                    b.HasOne("Domain.Entities.Order", null)
                         .WithMany("Tables")
                         .HasForeignKey("OrderId");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.Customer", b =>
+            modelBuilder.Entity("Domain.Entities.Customer", b =>
                 {
                     b.Navigation("Orders");
 
                     b.Navigation("Reservations");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.MenuItem", b =>
+            modelBuilder.Entity("Domain.Entities.MenuItem", b =>
                 {
                     b.Navigation("Items");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.Order", b =>
+            modelBuilder.Entity("Domain.Entities.Order", b =>
                 {
                     b.Navigation("Items");
 
@@ -326,7 +326,7 @@ namespace RMS.Infrastructure.Migrations
                     b.Navigation("Tables");
                 });
 
-            modelBuilder.Entity("RMS.Domain.Entities.Table", b =>
+            modelBuilder.Entity("Domain.Entities.Table", b =>
                 {
                     b.Navigation("Orders");
                 });

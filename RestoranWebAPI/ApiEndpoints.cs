@@ -1,4 +1,4 @@
-﻿namespace RMS.WebAPI;
+﻿namespace WebAPI;
 
 public static class ApiEndpoints
 {

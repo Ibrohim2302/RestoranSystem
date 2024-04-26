@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using RMS.Application.Interfaces;
-using RMS.Application.Interfaces.Repositories;
-using RMS.Application.Mappers;
-using RMS.Application.Services;
-using RMS.Domain.Entities;
-using RMS.Infrastructure.DataBases;
-using RMS.Infrastructure.Repositories;
+using Application.Interfaces;
+using Application.Interfaces.Repositories;
+using Application.Mappers;
+using Application.Services;
+using Domain.Entities;
+using Infrastructure.DataBases;
+using Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 

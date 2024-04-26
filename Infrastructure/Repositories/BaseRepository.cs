@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RMS.Application.Interfaces.Repositories;
-using RMS.Domain;
-using RMS.Infrastructure.Persistence.DataBases;
+using Application.Interfaces.Repositories;
+using Domain;
+using Infrastructure.Persistence.DataBases;
 
-namespace RMS.Infrastructure.Persistence.Repositories;
+namespace Infrastructure.Persistence.Repositories;
 
 public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : EntityBase
 {

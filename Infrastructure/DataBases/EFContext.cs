@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RMS.Domain;
-using RMS.Infrastructure.Persistence.TablesConfiguration;
+using Domain;
+using Infrastructure.Persistence.TablesConfiguration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RMS.Infrastructure.Persistence.DataBases;
+namespace Infrastructure.Persistence.DataBases;
 
 public class EFContext : DbContext
 {
