@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RMS.Domain.Abstract;
+using RMS.Domain;
 using RMS.Infrastructure.Persistence.TablesConfiguration;
 using System;
 using System.Collections.Generic;

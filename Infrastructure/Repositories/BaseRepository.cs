@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RMS.Application.Common.Interfaces.Repositories;
-using RMS.Domain.Abstract;
+using RMS.Domain;
 using RMS.Infrastructure.Persistence.DataBases;
 
 namespace RMS.Infrastructure.Persistence.Repositories;
