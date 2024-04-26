@@ -1,4 +1,4 @@
-﻿using Domain.Abstract;
+﻿using Domain;
 using Domain.Enum;
 using System;
 using System.Collections.Generic;
