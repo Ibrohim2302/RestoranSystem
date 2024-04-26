@@ -1,4 +1,4 @@
-﻿using RMS.Application.Common.Interfaces.Repositories;
+﻿using RMS.Application.Interfaces.Repositories;
 using RMS.Domain.Entities;
 using RMS.Infrastructure.Persistence.DataBases;
 using System;

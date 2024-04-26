@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RMS.Application.Common.Interfaces.Repositories;
+using RMS.Application.Interfaces.Repositories;
 using RMS.Domain;
 using RMS.Infrastructure.Persistence.DataBases;
 

@@ -1,5 +1,5 @@
-﻿using Application.Common.Interfaces.Repositories;
-using Application.Common.Interfaces;
+﻿using Application.Interfaces.Repositories;
+using Application.Interfaces;
 using AutoMapper;
 using Domain.Entities;
 

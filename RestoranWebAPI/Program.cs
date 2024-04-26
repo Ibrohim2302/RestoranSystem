@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using RMS.Application.Common.Interfaces;
-using RMS.Application.Common.Interfaces.Repositories;
+using RMS.Application.Interfaces;
+using RMS.Application.Interfaces.Repositories;
 using RMS.Application.Mappers;
 using RMS.Application.Services;
 using RMS.Domain.Entities;
